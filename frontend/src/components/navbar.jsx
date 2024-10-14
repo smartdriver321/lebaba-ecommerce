@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import avatarImg from '../assets/avatar.png'
+import CartModal from '../pages/shop/cart-modal'
 
 export default function Navbar() {
 	const products = useSelector((state) => state.cart.products)
+
+	const [isCartOpen, setisCartOpen] = useState(false)
+
+	const handleCartToggle = () => {
+		setisCartOpen(!isCartOpen)
+	}
 
 	console.table(products)
 
@@ -41,7 +49,7 @@ export default function Navbar() {
 						</Link>
 					</span>
 					<span>
-						<button className='hover:text-primary'>
+						<button className='hover:text-primary' onClick={handleCartToggle}>
 							<i className='ri-shopping-bag-line'></i>
 							<sup className='text-sm inline-block px-1.5 text-white rounded-full  bg-primary text-center'>
 								{products.length}
@@ -62,6 +70,13 @@ export default function Navbar() {
 					</span>
 				</div>
 			</nav>
+			{isCartOpen && (
+				<CartModal
+					products={products}
+					isOpen={isCartOpen}
+					onClose={handleCartToggle}
+				/>
+			)}
 		</header>
 	)
 }
