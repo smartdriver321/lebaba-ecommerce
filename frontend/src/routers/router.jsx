@@ -1,18 +1,20 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import App from '../App'
-import Home from '../pages/home/Home'
-import CategoryPage from '../pages/category/CategoryPage'
-import Search from '../pages/search/Search'
+import HomePage from '../pages/home/home'
+import CategoryPage from '../pages/category/category'
+import SearchPage from '../pages/search/search'
+import ShopPage from '../pages/shop/shop'
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
 		children: [
-			{ path: '/', element: <Home /> },
+			{ path: '/', element: <HomePage /> },
 			{ path: '/categories/:categoryName', element: <CategoryPage /> },
-			{ path: '/search', element: <Search /> },
+			{ path: '/search', element: <SearchPage /> },
+			{ path: '/shop', element: <ShopPage /> },
 		],
 	},
 ])

@@ -6,7 +6,7 @@ import DealsSection from './deals-section'
 import PromoBanner from './promo-banner'
 import Blogs from './blogs'
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<>
 			<Banner />
