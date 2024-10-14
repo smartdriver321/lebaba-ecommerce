@@ -1,8 +1,17 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+
+import { addToCart } from '../../redux/features/cartSlice'
 import RatingStars from '../../components/rating-stars'
 
 export default function ProductCards({ products }) {
+	const dispatch = useDispatch()
+
+	const handleAddToCart = (product) => {
+		dispatch(addToCart(product))
+	}
+
 	return (
 		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
 			{products.map((product, index) => (
@@ -18,7 +27,13 @@ export default function ProductCards({ products }) {
 
 						<div className='hover:block absolute top-3 right-3'>
 							<button>
-								<i className='ri-shopping-cart-2-line bg-primary p-1.5 text-white hover:bg-primary-dark'></i>
+								<i
+									className='ri-shopping-cart-2-line bg-primary p-1.5 text-white hover:bg-primary-dark'
+									onClick={(e) => {
+										e.stopPropagation()
+										handleAddToCart(product)
+									}}
+								></i>
 							</button>
 						</div>
 					</div>

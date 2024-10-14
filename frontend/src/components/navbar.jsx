@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import avatarImg from '../assets/avatar.png'
 
 export default function Navbar() {
+	const products = useSelector((state) => state.cart.products)
+
+	console.table(products)
+
 	return (
 		<header className='fixed-nav-bar w-nav'>
 			<nav className='max-w-screen-2xl mx-auto px-4 flex justify-between items-center'>
@@ -39,7 +44,7 @@ export default function Navbar() {
 						<button className='hover:text-primary'>
 							<i className='ri-shopping-bag-line'></i>
 							<sup className='text-sm inline-block px-1.5 text-white rounded-full  bg-primary text-center'>
-								4
+								{products.length}
 							</sup>
 						</button>
 					</span>
