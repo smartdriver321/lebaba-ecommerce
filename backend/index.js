@@ -5,8 +5,9 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
 const authRouter = require('./src/users/user.route')
-const productRouter = require('./src/products/products.route')
-const reviewRouter = require('./src/reviews/reviews.router')
+const productsRouter = require('./src/products/products.route')
+const reviewsRouter = require('./src/reviews/reviews.router')
+const ordersRouter = require('./src/orders/orders.route')
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -24,8 +25,9 @@ app.use(
 )
 
 app.use('/api/auth', authRouter)
-app.use('/api/products', productRouter)
-app.use('/api/reviews', reviewRouter)
+app.use('/api/products', productsRouter)
+app.use('/api/reviews', reviewsRouter)
+app.use('/api/orders', ordersRouter)
 
 async function main() {
 	await mongoose.connect(process.env.MONGO_URI)
