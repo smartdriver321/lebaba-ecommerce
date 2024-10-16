@@ -1,16 +1,26 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import App from '../App'
+import RegisterPage from '../components/register'
+import LoginPage from '../components/login'
 import HomePage from '../pages/home/home'
 import CategoryPage from '../pages/category/category'
 import SearchPage from '../pages/search/search'
 import ShopPage from '../pages/shop/shop'
 import SingleProduct from '../pages/shop/product-details/single-product'
-import RegisterPage from '../components/register'
-import LoginPage from '../components/login'
 import PaymentSuccess from '../components/payment-success'
+import DashboardLayout from '../pages/dashboard/dashboard-layout'
+import UserDMain from '../pages/dashboard/user/dashboard/user-d-main'
 
 const router = createBrowserRouter([
+	{
+		path: '/register',
+		element: <RegisterPage />,
+	},
+	{
+		path: '/login',
+		element: <LoginPage />,
+	},
 	{
 		path: '/',
 		element: <App />,
@@ -26,13 +36,14 @@ const router = createBrowserRouter([
 			},
 		],
 	},
+
 	{
-		path: '/register',
-		element: <RegisterPage />,
-	},
-	{
-		path: '/login',
-		element: <LoginPage />,
+		path: '/dashboard',
+		element: <DashboardLayout />,
+		children: [
+			// user dashboard routes
+			{ path: '', element: <div>User Dashboard</div> },
+		],
 	},
 ])
 
