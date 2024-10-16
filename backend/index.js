@@ -8,6 +8,7 @@ const authRouter = require('./src/users/user.route')
 const productsRouter = require('./src/products/products.route')
 const reviewsRouter = require('./src/reviews/reviews.router')
 const ordersRouter = require('./src/orders/orders.route')
+const statsRouter = require('./src/stats/stats.route')
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -28,6 +29,7 @@ app.use('/api/auth', authRouter)
 app.use('/api/products', productsRouter)
 app.use('/api/reviews', reviewsRouter)
 app.use('/api/orders', ordersRouter)
+app.use('/api/stats', statsRouter)
 
 async function main() {
 	await mongoose.connect(process.env.MONGO_URI)
