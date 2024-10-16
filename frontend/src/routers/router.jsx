@@ -14,6 +14,7 @@ import PrivateRoute from './private-route'
 import DashboardLayout from '../pages/dashboard/dashboard-layout'
 import UserDMain from '../pages/dashboard/user/dashboard/user-d-main'
 import UserOrders from '../pages/dashboard/user/user-orders'
+import UserPayments from '../pages/dashboard/user/user-payments'
 
 const router = createBrowserRouter([
 	{
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
 			// user dashboard routes
 			{ path: '', element: <UserDMain /> },
 			{ path: 'orders', element: <UserOrders /> },
+			{ path: 'payments', element: <UserPayments /> },
 		],
 	},
 ])
