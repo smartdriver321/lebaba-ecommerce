@@ -9,6 +9,7 @@ import SearchPage from '../pages/search/search'
 import ShopPage from '../pages/shop/shop'
 import SingleProduct from '../pages/shop/product-details/single-product'
 import PaymentSuccess from '../components/payment-success'
+import OrderDetails from '../pages/dashboard/user/order-details'
 import PrivateRoute from './private-route'
 import DashboardLayout from '../pages/dashboard/dashboard-layout'
 import UserDMain from '../pages/dashboard/user/dashboard/user-d-main'
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: '/success',
 				element: <PaymentSuccess />,
+			},
+			{
+				path: '/orders/:orderId',
+				element: <OrderDetails />,
 			},
 		],
 	},
