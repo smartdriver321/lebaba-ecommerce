@@ -20,9 +20,9 @@ export default function Navbar() {
 
 	const adminDropDownMenus = [
 		{ label: 'Dashboard', path: '/dashboard/admin' },
-		{ label: 'Manage Items', path: '/dashboard/manage-products' },
-		{ label: 'All Orders', path: '/dashboard/manage-orders' },
 		{ label: 'Add Product', path: '/dashboard/add-product' },
+		{ label: 'Manage Products', path: '/dashboard/manage-products' },
+		{ label: 'Manage Orders', path: '/dashboard/manage-orders' },
 	]
 
 	const userDropDownMenus = [
@@ -64,9 +64,6 @@ export default function Navbar() {
 					</li>
 					<li className='link'>
 						<Link to='/shop'>Shop</Link>
-					</li>
-					<li className='link'>
-						<Link to='/'>Pages</Link>
 					</li>
 					<li className='link'>
 						<Link to='/contact'>Contact</Link>

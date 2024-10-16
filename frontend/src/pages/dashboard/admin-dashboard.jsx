@@ -8,8 +8,8 @@ const navItems = [
 	{ path: '/dashboard/admin', label: 'Dashboard' },
 	{ path: '/dashboard/add-product', label: 'Add Product' },
 	{ path: '/dashboard/manage-products', label: 'Manage Products' },
-	{ path: '/dashboard/users', label: 'Users' },
 	{ path: '/dashboard/manage-orders', label: 'Manage Orders' },
+	{ path: '/dashboard/users', label: 'Users' },
 ]
 export default function AdminDashboard() {
 	const navigate = useNavigate()
@@ -33,7 +33,7 @@ export default function AdminDashboard() {
 					<Link to='/'>
 						Lebaba<span>.</span>
 					</Link>
-					<p className='text-xs italic'>User dashboard</p>
+					<p className='text-xs italic'>Admin dashboard</p>
 				</div>
 				<hr className='mt-5' />
 				<ul className='space-y-5 pt-5'>

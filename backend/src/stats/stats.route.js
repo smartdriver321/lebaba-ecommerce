@@ -75,7 +75,9 @@ router.get('/admin-stats', async (req, res) => {
 		])
 
 		const totalEarnings =
-			totalEarningsResult.length > 0 ? totalEarningsResult[0].totalEarnings : 0
+			totalEarningsResult.length > 0
+				? totalEarningsResult[0].totalEarnings.toFixed(2)
+				: 0
 
 		// Calculate monthly earnings by summing the 'amount' of all orders grouped by month
 		const monthlyEarningsResult = await Order.aggregate([
