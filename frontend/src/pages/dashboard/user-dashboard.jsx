@@ -8,8 +8,8 @@ const navItems = [
 	{ path: '/dashboard', label: 'Dashboard' },
 	{ path: '/dashboard/orders', label: 'Order' },
 	{ path: '/dashboard/payments', label: 'Payments' },
-	{ path: '/dashboard/profile', label: 'Profile' },
 	{ path: '/dashboard/reviews', label: 'Reviews' },
+	{ path: '/dashboard/profile', label: 'Profile' },
 ]
 
 export default function UserDashboard() {
