@@ -16,6 +16,7 @@ import UserDMain from '../pages/dashboard/user/dashboard/user-d-main'
 import UserOrders from '../pages/dashboard/user/user-orders'
 import UserPayments from '../pages/dashboard/user/user-payments'
 import UserReviews from '../pages/dashboard/user/user-reviews'
+import UserProfile from '../pages/dashboard/user/user-profile'
 
 const router = createBrowserRouter([
 	{
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
 			{ path: 'orders', element: <UserOrders /> },
 			{ path: 'payments', element: <UserPayments /> },
 			{ path: 'reviews', element: <UserReviews /> },
+			{ path: 'profile', element: <UserProfile /> },
 		],
 	},
 ])
