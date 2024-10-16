@@ -9,8 +9,8 @@ import SearchPage from '../pages/search/search'
 import ShopPage from '../pages/shop/shop'
 import SingleProduct from '../pages/shop/product-details/single-product'
 import PaymentSuccess from '../components/payment-success'
+import PrivateRoute from './private-route'
 import DashboardLayout from '../pages/dashboard/dashboard-layout'
-import UserDMain from '../pages/dashboard/user/dashboard/user-d-main'
 
 const router = createBrowserRouter([
 	{
@@ -39,7 +39,11 @@ const router = createBrowserRouter([
 
 	{
 		path: '/dashboard',
-		element: <DashboardLayout />,
+		element: (
+			<PrivateRoute>
+				<DashboardLayout />
+			</PrivateRoute>
+		),
 		children: [
 			// user dashboard routes
 			{ path: '', element: <div>User Dashboard</div> },
