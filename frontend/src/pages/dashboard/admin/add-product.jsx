@@ -85,7 +85,7 @@ export default function AddProduct() {
 				<TextInput
 					label='Product Name'
 					name='name'
-					placeholder='Ex: Diamond Earrings'
+					placeholder='Ex: Diamond Earings'
 					value={product.name}
 					onChange={handleChange}
 				/>
@@ -96,6 +96,7 @@ export default function AddProduct() {
 					onChange={handleChange}
 					options={categories}
 				/>
+
 				<SelectInput
 					label='Color'
 					name='color'
