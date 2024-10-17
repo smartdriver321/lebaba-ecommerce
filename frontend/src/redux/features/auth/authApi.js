@@ -70,7 +70,7 @@ export const {
 	useLogoutUserMutation,
 	useGetUserQuery,
 	useDeleteUserMutation,
-	useUpdateUerRoleMutation,
+	useUpdateUserRoleMutation,
 	useEditProfileMutation,
 } = authApi
 export default authApi

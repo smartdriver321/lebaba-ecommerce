@@ -101,7 +101,7 @@ export default function UpdateProduct() {
 			await updateProduct({ id: id, ...updatedProduct }).unwrap()
 			alert('Product updated successfully')
 			await refetch()
-			navigate('/dashboard/manage-product')
+			navigate('/dashboard/manage-products')
 		} catch (error) {
 			console.error('Failed to update product:', error)
 		}

@@ -7,9 +7,9 @@ import { useLogoutUserMutation } from '../../redux/features/auth/authApi'
 const navItems = [
 	{ path: '/dashboard/admin', label: 'Dashboard' },
 	{ path: '/dashboard/add-product', label: 'Add Product' },
-	{ path: '/dashboard/manage-product', label: 'Manage Product' },
+	{ path: '/dashboard/manage-products', label: 'Manage Products' },
 	{ path: '/dashboard/manage-order', label: 'Manage Order' },
-	{ path: '/dashboard/users', label: 'Users' },
+	{ path: '/dashboard/manage-users', label: 'Manage Users' },
 ]
 export default function AdminDashboard() {
 	const navigate = useNavigate()
