@@ -22,7 +22,8 @@ export default function Navbar() {
 		{ label: 'Dashboard', path: '/dashboard/admin' },
 		{ label: 'Add Product', path: '/dashboard/add-product' },
 		{ label: 'Manage Products', path: '/dashboard/manage-products' },
-		{ label: 'Manage Order', path: '/dashboard/manage-order' },
+		{ label: 'Manage Orders', path: '/dashboard/manage-orders' },
+		{ label: 'Manage Users', path: '/dashboard/manage-users' },
 	]
 
 	const userDropDownMenus = [

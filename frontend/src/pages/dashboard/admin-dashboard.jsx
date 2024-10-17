@@ -8,7 +8,7 @@ const navItems = [
 	{ path: '/dashboard/admin', label: 'Dashboard' },
 	{ path: '/dashboard/add-product', label: 'Add Product' },
 	{ path: '/dashboard/manage-products', label: 'Manage Products' },
-	{ path: '/dashboard/manage-order', label: 'Manage Order' },
+	{ path: '/dashboard/manage-orders', label: 'Manage Orders' },
 	{ path: '/dashboard/manage-users', label: 'Manage Users' },
 ]
 export default function AdminDashboard() {
